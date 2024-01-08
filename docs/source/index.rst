@@ -1,25 +1,27 @@
 EHR-ML
 ======
 
-EHR-ML is a comprehensive utility for predictive modelling using the EHR.
+**EHR-ML empowers predictive modeling in healthcare, offering a comprehensive suite of tools designed to unlock the full potential of electronic health records (EHRs). It streamlines the process of building accurate and reliable models for various clinical outcomes, addressing unique challenges within healthcare data.**
 
-It offers 4 different analysis to determine the optimal set-up for modelling a certain clinical outcome, namely;
+**Key features:**
 
-1. Time-Window Analysis
-2. Sample-Size Analysis
-3. Standardisation Analysis
-4. Class-Ratio Analysis
+- **Optimization guidance:** Provides four essential analyses to determine the optimal setup for specific clinical outcomes:
+    - Time-Window Analysis
+    - Sample-Size Analysis
+    - Standardisation Analysis
+    - Class-Ratio Analysis
 
-Additionally, it offers utilities for predicting two clinical outcomes;
+- **Dedicated prediction utilities:** Offers pre-built tools for predicting two crucial outcomes:
+    - EHR2Mortality
+    - EHR2LOS
 
-1. EHR2Mortality
-2. EHR2LOS
+- **Generic prediction utility:** Additionally, it also offers a generic utility for building predictive models for any clinical outcome present in the EHR.
 
-Also, there is a generic utility which can be configured to perform any outcome prediction using the EHR.
+- **Customizable model:** Includes a custom-built model specifically designed to handle the intricacies of time-varying signals in healthcare data.
 
-This utility is primarily designed to handle introcacies of the time-varying signals present in the healthcare data by offering a custom built model for this task.
+- **User-friendly interfaces:** Choose between a command-line interface (CLI) for those with basic Linux skills or an intuitive web portal, both providing full functionality.
 
-A command line interface is designed to provide an abstraction over the internal implementation details while at the same time being easy to use for anyone with basic Linux skills. There is also an easy to use web-portal offering all the functionalities of the command-line library.
+**EHR-ML bridges the gap between complex healthcare data and actionable insights, enabling researchers and clinicians to make informed decisions and improve patient care.**
 
 .. image:: images/ehr_ml_methods.png
 
