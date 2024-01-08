@@ -91,5 +91,5 @@ Verify the installation by running the following command. The expected output sh
 
 .. code-block:: console
 
-   (.venv) user@hostname:~/workspace/EHR-ML$ python -m EHR-QC -v
+   (.venv) user@hostname:~/workspace/EHR-ML$ python -m EHR-ML -v
    EHR-ML 1.0
