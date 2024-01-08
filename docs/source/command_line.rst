@@ -128,31 +128,31 @@ Output
 
 .. code-block:: console
 
-usage: Evaluate.py [-h] [-tc TARGET_COLUMN] [-ic [ID_COLUMNS [ID_COLUMNS ...]]] [-mdc MEASUREMENT_DATE_COLUMN] [-adc ANCHOR_DATE_COLUMN] [-wb WINDOW_BEFORE] [-wa WINDOW_AFTER]
-                   [-sp SAVE_PATH]
-                   data_file
-
-EHR-ML machine learning utility
-
-positional arguments:
-  data_file             Path of the data file in csv format
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -tc TARGET_COLUMN, --target_column TARGET_COLUMN
-                        Name of the column containing the target variable
-  -ic [ID_COLUMNS [ID_COLUMNS ...]], --id_columns [ID_COLUMNS [ID_COLUMNS ...]]
-                        Name/s of the columns containing the the IDs
-  -mdc MEASUREMENT_DATE_COLUMN, --measurement_date_column MEASUREMENT_DATE_COLUMN
-                        Name of the column containing the measurement date
-  -adc ANCHOR_DATE_COLUMN, --anchor_date_column ANCHOR_DATE_COLUMN
-                        Name of the anchor date column
-  -wb WINDOW_BEFORE, --window_before WINDOW_BEFORE
-                        Number of days or data to include before time-zero. By default: [window_before=0]
-  -wa WINDOW_AFTER, --window_after WINDOW_AFTER
-                        Number of days or data to include after time-zero. By default: [window_after=3]
-  -sp SAVE_PATH, --save_path SAVE_PATH
-                        File path to save the results
+   usage: Evaluate.py [-h] [-tc TARGET_COLUMN] [-ic [ID_COLUMNS [ID_COLUMNS ...]]] [-mdc MEASUREMENT_DATE_COLUMN] [-adc ANCHOR_DATE_COLUMN] [-wb WINDOW_BEFORE] [-wa WINDOW_AFTER]
+                      [-sp SAVE_PATH]
+                      data_file
+   
+   EHR-ML machine learning utility
+   
+   positional arguments:
+     data_file             Path of the data file in csv format
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -tc TARGET_COLUMN, --target_column TARGET_COLUMN
+                           Name of the column containing the target variable
+     -ic [ID_COLUMNS [ID_COLUMNS ...]], --id_columns [ID_COLUMNS [ID_COLUMNS ...]]
+                           Name/s of the columns containing the the IDs
+     -mdc MEASUREMENT_DATE_COLUMN, --measurement_date_column MEASUREMENT_DATE_COLUMN
+                           Name of the column containing the measurement date
+     -adc ANCHOR_DATE_COLUMN, --anchor_date_column ANCHOR_DATE_COLUMN
+                           Name of the anchor date column
+     -wb WINDOW_BEFORE, --window_before WINDOW_BEFORE
+                           Number of days or data to include before time-zero. By default: [window_before=0]
+     -wa WINDOW_AFTER, --window_after WINDOW_AFTER
+                           Number of days or data to include after time-zero. By default: [window_after=3]
+     -sp SAVE_PATH, --save_path SAVE_PATH
+                           File path to save the results
 
 Build
 -----
