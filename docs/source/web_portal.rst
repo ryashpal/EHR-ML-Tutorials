@@ -1,5 +1,5 @@
-Command Line
-============
+Web Portal
+==========
 
 EHR2Mortality
 -------------
