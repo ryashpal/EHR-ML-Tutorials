@@ -1,5 +1,9 @@
+Command Line
+============
+
+
 Install
-=======
+-------
 
 Follow the below steps to install EHR-ML in your computer.
 
@@ -85,7 +89,7 @@ Install all the required dependencies listed in the requirements.txt file in the
 
 
 Verify
-~~~~~~
+------
 
 Verify the installation by running the following command. The expected output should contain ``EHR-ML <version number>``.
 
