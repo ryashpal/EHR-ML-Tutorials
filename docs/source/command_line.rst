@@ -161,7 +161,7 @@ To Evaluate the mortality prediction model for a specific data file.
 
 .. code-block:: console
 
-    (.venv) app_user@hostname:~$python -m ehrml.ensemble.Evaluate <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -sp <path/to/save/output.json>
+    (.venv) app_user@hostname:~$python -m ehrml.ensemble.Evaluate <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -sp <path/to/save/metrics.json>
 
 Output
 
@@ -170,8 +170,136 @@ A JSON file containing the performance metricies including Fit Time, Score Time,
 Build
 -----
 
+This utility will help to build a mortality prediction model using the parameters specified.
+
+Help menu
+~~~~~~~~~
+
+To display the help menu of the Build functionality.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ehr2mortality.Build -h
+
+
+or
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ehr2mortality.Build --help
+
+
+Output
+
+.. code-block:: console
+
+   usage: Build.py [-h] [-ic [ID_COLUMNS [ID_COLUMNS ...]]] [-tc TARGET_COLUMN] [-mdc MEASUREMENT_DATE_COLUMN] [-adc ANCHOR_DATE_COLUMN] [-wb WINDOW_BEFORE] [-wa WINDOW_AFTER]
+                   [-sp SAVE_PATH]
+                   data_file
+   
+   EHR-ML machine learning utility
+   
+   positional arguments:
+     data_file             Path of the data file in csv format
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -ic [ID_COLUMNS [ID_COLUMNS ...]], --id_columns [ID_COLUMNS [ID_COLUMNS ...]]
+                           Name/s of the columns containing the the IDs
+     -tc TARGET_COLUMN, --target_column TARGET_COLUMN
+                           Name of the column containing the target variable
+     -mdc MEASUREMENT_DATE_COLUMN, --measurement_date_column MEASUREMENT_DATE_COLUMN
+                           Name of the column containing the measurement date
+     -adc ANCHOR_DATE_COLUMN, --anchor_date_column ANCHOR_DATE_COLUMN
+                           Name of the anchor date column
+     -wb WINDOW_BEFORE, --window_before WINDOW_BEFORE
+                           Number of days or data to include before time-zero. By default: [window_before=0]
+     -wa WINDOW_AFTER, --window_after WINDOW_AFTER
+                           Number of days or data to include after time-zero. By default: [window_after=3]
+     -sp SAVE_PATH, --save_path SAVE_PATH
+                           File path to save the model
+
+To Build
+~~~~~~~~
+
+To Build the mortality prediction model for a specific data file.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ensemble.Evaluate <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -sp <path/to/save/model.pkl>
+
+Output
+
+A pickle file containing a built model.
+
+
 Predict
 -------
+
+This utility will help to perform predictions using the mortality prediction model.
+
+Help menu
+~~~~~~~~~
+
+To display the help menu of the Predict functionality.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ehr2mortality.Predict -h
+
+
+or
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ehr2mortality.Predict --help
+
+
+Output
+
+.. code-block:: console
+
+   usage: Predict.py [-h] [-ic [ID_COLUMNS [ID_COLUMNS ...]]] [-tc TARGET_COLUMN] [-mdc MEASUREMENT_DATE_COLUMN] [-adc ANCHOR_DATE_COLUMN] [-wb WINDOW_BEFORE] [-wa WINDOW_AFTER]
+                     [-mp MODEL_PATH] [-sp SAVE_PATH]
+                     data_file
+   
+   EHR-ML machine learning utility
+   
+   positional arguments:
+     data_file             Path of the data file in csv format
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -ic [ID_COLUMNS [ID_COLUMNS ...]], --id_columns [ID_COLUMNS [ID_COLUMNS ...]]
+                           Name/s of the columns containing the the IDs
+     -tc TARGET_COLUMN, --target_column TARGET_COLUMN
+                           Name of the column containing the target variable
+     -mdc MEASUREMENT_DATE_COLUMN, --measurement_date_column MEASUREMENT_DATE_COLUMN
+                           Name of the column containing the measurement date
+     -adc ANCHOR_DATE_COLUMN, --anchor_date_column ANCHOR_DATE_COLUMN
+                           Name of the anchor date column
+     -wb WINDOW_BEFORE, --window_before WINDOW_BEFORE
+                           Number of days or data to include before time-zero. By default: [window_before=0]
+     -wa WINDOW_AFTER, --window_after WINDOW_AFTER
+                           Number of days or data to include after time-zero. By default: [window_after=3]
+     -mp MODEL_PATH, --model_path MODEL_PATH
+                           File containing the model
+     -sp SAVE_PATH, --save_path SAVE_PATH
+                           File path to save the model predictions
+
+To Predict
+~~~~~~~~~~
+
+To perform predictions using the mortality prediction model.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ensemble.Evaluate <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -mp <path/to/save/model.pkl> -sp <path/to/save/predictions.csv>
+
+Output
+
+A csv file containing the predictions.
+
 
 EHR2LOS
 +++++++
