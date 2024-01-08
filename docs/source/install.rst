@@ -38,7 +38,7 @@ In the destination folder, clone the current version of EHR-ML repository from t
    user@hostname:~/workspace$ git clone https://github.com/ryashpal/EHR-ML.git
 
 
-Open EHR-QC
+Open EHR-ML
 -----------
 
 Open the ``EHR-ML`` directory that is downloaded from GitHub after cloning.
