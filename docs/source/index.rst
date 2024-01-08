@@ -49,6 +49,6 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   install
-   analysis
+   command_line
+   web_portal
 
