@@ -3,7 +3,7 @@ Command Line
 
 
 Install
--------
++++++++
 
 Follow the below steps to install EHR-ML in your computer.
 
@@ -97,3 +97,33 @@ Verify the installation by running the following command. The expected output sh
 
    (.venv) user@hostname:~/workspace/EHR-ML$ python -m EHR-ML -v
    EHR-ML 1.0
+
+
+EHR2Mortality
++++++++++++++
+
+
+EHR2LOS
++++++++
+
+
+Generic Prediction Utility
+++++++++++++++++++++++++++
+
+
+Set-up Optimisation
++++++++++++++++++++
+
+
+Time-Window Analysis
+--------------------
+
+Sample-Size Analysis
+--------------------
+
+Standardisation Analysis
+--------------------
+
+Class-Ratio Analysis
+--------------------
+
