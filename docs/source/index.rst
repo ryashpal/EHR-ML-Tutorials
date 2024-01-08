@@ -50,3 +50,5 @@ Contents
    :maxdepth: 1
 
    install
+   analysis
+
