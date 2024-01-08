@@ -154,6 +154,17 @@ Output
      -sp SAVE_PATH, --save_path SAVE_PATH
                            File path to save the results
 
+To Evaluate
+~~~~~~~~~~~
+
+To Evaluate the mortality prediction model for a specific data file.
+
+    (.venv) app_user@hostname:~$python -m ehrml.ensemble.Evaluate <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -sp <path/to/save/output.json>
+
+Output
+
+A JSON file containing the performance metricies including Fit Time, Score Time, Accuracy, Balanced Accuracy, Average Precision, F1, ROC AUC, and MCCF1 scores.
+
 Build
 -----
 
