@@ -3,6 +3,8 @@ EHR-ML
 
 EHR-ML is a
 
+.. image:: images/ehr_ml_methods.png
+
 .. note::
 
    This project is under active development.
