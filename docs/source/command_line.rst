@@ -159,6 +159,8 @@ To Evaluate
 
 To Evaluate the mortality prediction model for a specific data file.
 
+.. code-block:: console
+
     (.venv) app_user@hostname:~$python -m ehrml.ensemble.Evaluate <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -sp <path/to/save/output.json>
 
 Output
