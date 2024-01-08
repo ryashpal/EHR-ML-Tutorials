@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'EHR-QC'
+project = 'EHR-ML'
 copyright = '2023, Dr. Sonika Tyagi'
 author = 'Yashpal Ramakrishnaiah'
 
