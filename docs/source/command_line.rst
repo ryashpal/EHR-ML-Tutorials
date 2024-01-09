@@ -705,8 +705,8 @@ Output
 A csv file containing the predictions.
 
 
-Set-up Optimisation
-+++++++++++++++++++
+Set-up Optimisation (Benchmarking)
+++++++++++++++++++++++++++++++++++
 
 This section deals with determining the best set-up for modelling clinical outcomes.
 
