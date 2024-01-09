@@ -770,7 +770,7 @@ To perform time-window analysis for a combination of specified window start and 
 
 .. code-block:: console
 
-    (.venv) app_user@hostname:~$python -m ehrml.ensemble.Evaluate <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before Value List> -wa <Window After Value List> -e -sp <path/to/save/predictions.csv>
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.TimeWindowAnalysis <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before Value List> -wa <Window After Value List> -e -sp <path/to/save/predictions.csv>
 
 .. note::
 
@@ -778,15 +778,222 @@ To perform time-window analysis for a combination of specified window start and 
 
 Output
 
-Multiple csv files containing the predictions saved at the specified path.
+Multiple csv files containing the predictions saved at the specified path each corresponding to the supplied data windows.
 
 
 Sample-Size Analysis
 --------------------
 
+This utility will help to understand the effect of sample-size on the predictive performance.
+
+Help menu
+~~~~~~~~~
+
+To display the help menu of the sample-size analysis functionality.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.SampleSizeAnalysis -h
+
+
+or
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.SampleSizeAnalysis --help
+
+
+Output
+
+.. code-block:: console
+
+   usage: SampleSizeAnalysis.py [-h] [-tc TARGET_COLUMN] [-ic [ID_COLUMNS [ID_COLUMNS ...]]] [-mdc MEASUREMENT_DATE_COLUMN] [-adc ANCHOR_DATE_COLUMN] [-wb WINDOW_BEFORE]
+                                [-wa WINDOW_AFTER] [-ss [SAMPLE_SIZE [SAMPLE_SIZE ...]]] [-e] [-sp SAVE_PATH]
+                                data_file
+   
+   EHR-ML machine learning utility
+   
+   positional arguments:
+     data_file             Path of the data file in csv format
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -tc TARGET_COLUMN, --target_column TARGET_COLUMN
+                           Name of the column containing the target variable
+     -ic [ID_COLUMNS [ID_COLUMNS ...]], --id_columns [ID_COLUMNS [ID_COLUMNS ...]]
+                           Name/s of the columns containing the the IDs
+     -mdc MEASUREMENT_DATE_COLUMN, --measurement_date_column MEASUREMENT_DATE_COLUMN
+                           Name of the column containing the measurement date
+     -adc ANCHOR_DATE_COLUMN, --anchor_date_column ANCHOR_DATE_COLUMN
+                           Name of the anchor date column
+     -wb WINDOW_BEFORE, --window_before WINDOW_BEFORE
+                           Number of days or data to include before time-zero. By default: [window_before=0]
+     -wa WINDOW_AFTER, --window_after WINDOW_AFTER
+                           Number of days or data to include after time-zero. By default: [window_after=3]
+     -ss [SAMPLE_SIZE [SAMPLE_SIZE ...]], --sample_size [SAMPLE_SIZE [SAMPLE_SIZE ...]]
+                           Sample Sizes
+     -e, --ensemble        Use ensemble model.
+     -sp SAVE_PATH, --save_path SAVE_PATH
+                           Directory path to save the results and intermediate files
+
+Analyse
+~~~~~~~
+
+To perform sample-size analysis for a series of specified sample size values.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.SampleSizeAnalysis <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -ss <List of Sample Sizes> -e -sp <path/to/save/predictions.csv>
+
+.. note::
+
+    You have the flexibility to run this analysis with either a standalone or ensemble model, easily enabled by the -e switch.
+
+Output
+
+Multiple csv files containing the predictions saved at the specified path each corresponding to the supplied sample sizes.
+
+
 Standardisation Analysis
---------------------
+------------------------
+
+This utility will help to understand the effect of standardisation on the predictive performance.
+
+Help menu
+~~~~~~~~~
+
+To display the help menu of the standardisation analysis functionality.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.StandardisationAnalysis -h
+
+
+or
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.StandardisationAnalysis --help
+
+
+Output
+
+.. code-block:: console
+
+   usage: StandardisationAnalysis.py [-h] [-tc TARGET_COLUMN] [-ic [ID_COLUMNS [ID_COLUMNS ...]]] [-mdc MEASUREMENT_DATE_COLUMN] [-adc ANCHOR_DATE_COLUMN] [-wb WINDOW_BEFORE]
+                                     [-wa WINDOW_AFTER] [-e] [-sp SAVE_DIR]
+                                     data_file
+   
+   EHR-ML machine learning utility
+   
+   positional arguments:
+     data_file             Path of the data file in csv format
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -tc TARGET_COLUMN, --target_column TARGET_COLUMN
+                           Name of the column containing the target variable
+     -ic [ID_COLUMNS [ID_COLUMNS ...]], --id_columns [ID_COLUMNS [ID_COLUMNS ...]]
+                           Name/s of the columns containing the the IDs
+     -mdc MEASUREMENT_DATE_COLUMN, --measurement_date_column MEASUREMENT_DATE_COLUMN
+                           Name of the column containing the measurement date
+     -adc ANCHOR_DATE_COLUMN, --anchor_date_column ANCHOR_DATE_COLUMN
+                           Name of the anchor date column
+     -wb WINDOW_BEFORE, --window_before WINDOW_BEFORE
+                           Number of days or data to include before time-zero. By default: [window_before=0]
+     -wa WINDOW_AFTER, --window_after WINDOW_AFTER
+                           Number of days or data to include after time-zero. By default: [window_after=3]
+     -e, --ensemble        Use ensemble model.
+     -sp SAVE_DIR, --save_dir SAVE_DIR
+                           Directory to save the results and intermediate files
+
+Analyse
+~~~~~~~
+
+To perform standardisation analysis comparing the raw data, standard-scaled data, and the min-max-scaled data.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.StandardisationAnalysis <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -e -sp <path/to/save/predictions.csv>
+
+.. note::
+
+    You have the flexibility to run this analysis with either a standalone or ensemble model, easily enabled by the -e switch.
+
+Output
+
+Multiple csv files containing the predictions saved at the specified path each corresponding to the raw data, standard-scaled data, and the min-max-scaled data.
 
 Class-Ratio Analysis
 --------------------
+
+This utility will help to understand the effect of class-ratio on the predictive performance.
+
+Help menu
+~~~~~~~~~
+
+To display the help menu of the class-ratio analysis functionality.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.ClassRatioAnalysis -h
+
+
+or
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.ClassRatioAnalysis --help
+
+
+Output
+
+.. code-block:: console
+
+   usage: ClassRatioAnalysis.py [-h] [-tc TARGET_COLUMN] [-ic [ID_COLUMNS [ID_COLUMNS ...]]] [-mdc MEASUREMENT_DATE_COLUMN] [-adc ANCHOR_DATE_COLUMN] [-wb WINDOW_BEFORE]
+                                [-wa WINDOW_AFTER] [-pcp [POSITIVE_CLASS_PROPORTIONS [POSITIVE_CLASS_PROPORTIONS ...]]] [-e] [-sp SAVE_PATH]
+                                data_file
+   
+   EHR-ML machine learning utility
+   
+   positional arguments:
+     data_file             Path of the data file in csv format
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -tc TARGET_COLUMN, --target_column TARGET_COLUMN
+                           Name of the column containing the target variable
+     -ic [ID_COLUMNS [ID_COLUMNS ...]], --id_columns [ID_COLUMNS [ID_COLUMNS ...]]
+                           Name/s of the columns containing the the IDs
+     -mdc MEASUREMENT_DATE_COLUMN, --measurement_date_column MEASUREMENT_DATE_COLUMN
+                           Name of the column containing the measurement date
+     -adc ANCHOR_DATE_COLUMN, --anchor_date_column ANCHOR_DATE_COLUMN
+                           Name of the anchor date column
+     -wb WINDOW_BEFORE, --window_before WINDOW_BEFORE
+                           Number of days or data to include before time-zero. By default: [window_before=0]
+     -wa WINDOW_AFTER, --window_after WINDOW_AFTER
+                           Number of days or data to include after time-zero. By default: [window_after=3]
+     -pcp [POSITIVE_CLASS_PROPORTIONS [POSITIVE_CLASS_PROPORTIONS ...]], --positive_class_proportions [POSITIVE_CLASS_PROPORTIONS [POSITIVE_CLASS_PROPORTIONS ...]]
+                           Positive Class Proportions
+     -e, --ensemble        Use ensemble model.
+     -sp SAVE_PATH, --save_path SAVE_PATH
+                           Directory path to save the results and intermediate files
+
+Analyse
+~~~~~~~
+
+To perform class-ratio analysis for a series of specified class ratio values. For every positive class proportion (pcp) specified, the corresponding negative class proportion (ncp) is calculated by the formula ncp = 100 - pcp. For instance, if the positive class proportion is pcp = 40, then the corresponding negative class proportion is obtained by ncp = 100-40 which is 60. Next, for every value in the specified pcp, the negative class is downsampled to create the specified ratio for running this analysis.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.analysis.ClassRatioAnalysis <path/to/input/data.csv> -tc <Target Column Name> -ic <ID Column 1> <ID Column 2> -mdc <Measurement Data Column> -adc <Anchor Data Column> -wb <Window Before> -wa <Window After> -pcp <List of Positive Class Proportions> -e -sp <path/to/save/predictions.csv>
+
+.. note::
+
+    You have the flexibility to run this analysis with either a standalone or ensemble model, easily enabled by the -e switch.
+
+Output
+
+Multiple csv files containing the predictions saved at the specified path each corresponding to the supplied class ratios.
+
 
