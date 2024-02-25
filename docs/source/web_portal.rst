@@ -16,7 +16,9 @@ Download sample data
 
 **See how EHR-ML works!**
 
-Download a sample input file to learn its format and get started quickly. Click `Start` on the `Homepage`, then `Download` on the next page.
+Download a sample input file to learn its format and dive right in. Click `Start` on the `Homepage`, then `Download` on the `Data Management` page.
+
+.. image:: images/ehr_ml_web/home_page.PNG
 
 Upload data files
 -----------------
