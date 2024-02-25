@@ -23,6 +23,12 @@ Download a sample input file to learn its format and dive right in. Click `Start
 Upload data files
 -----------------
 
+**Let's upload your data!**
+
+Make sure your files match the format (sample file provided). Click "Start" on the homepage, then "Upload" on the "Data Management" page.
+
+.. image:: images/ehr_ml_web/data_management_upload.png
+
 Evaluate
 --------
 
