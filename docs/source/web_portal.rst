@@ -5,7 +5,9 @@ The EHR-ML is now accessible via a web-based interface through a dedicated web-p
 
 **Get started by visiting the below URL**
 
-[http://superbugai.erc.monash.edu:8081/](http://superbugai.erc.monash.edu:8081/)
+[Link to EHR-ML](http://superbugai.erc.monash.edu:8081/)
+
+After loading the URL, the `Homepage` appears;
 
 Download sample data
 --------------------
