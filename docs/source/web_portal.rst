@@ -9,12 +9,14 @@ http://superbugai.erc.monash.edu:8081/
 
 After loading the URL, the `Homepage` appears;
 
+.. image:: images/ehr_ml_web/home_page.PNG
+
 Download sample data
 --------------------
 
 **See how EHR-ML works!**
 
-Download a sample input file to learn its format and get started quickly. Click "Start" on the homepage, then "Download" on the next page.
+Download a sample input file to learn its format and get started quickly. Click `Start` on the `Homepage`, then `Download` on the next page.
 
 Upload data files
 -----------------
