@@ -130,8 +130,86 @@ This data helps you analyze the impact of different time windows on your model's
 Class Ratio Analysis
 --------------------
 
+**Uncover Class Ratio Impact on Model's Performance!**
+
+This powerful tool helps you understand how different class ratio affect your prediction model's accuracy.
+
+**Standalone or Ensemble? Your Choice!**
+
+Run the analysis on a standalone model or an ensemble model.
+
+You have the flexibility to run this analysis with either a standalone or ensemble model.
+
+**Grab your token**: Enter the token associated with your uploaded data. (Remember, this token acts as your key to access your data.)
+
+.. image:: images/ehr_ml_web/cra_token_page.PNG
+
+**Dive deeper**: On the next page, provide additional details about the analysis.
+
+**Click and analyze**: Hit "Submit" and relax! You can revisit this page anytime to download the results.
+
+.. image:: images/ehr_ml_web/cra_main_page.PNG
+
+**Output**:
+
+A JSON file containing the performance metricies including Fit Time, Score Time, Accuracy, Balanced Accuracy, Average Precision, F1, ROC AUC, and MCCF1 scores.
+
+This data helps you analyze the impact of different class ratio on your model's effectiveness and choose the best option for your specific needs.
+
 Sample Size Analysis
 --------------------
 
+**Uncover Sample Size Impact on Model's Performance!**
+
+This powerful tool helps you understand how different sample size affect your prediction model's accuracy.
+
+**Standalone or Ensemble? Your Choice!**
+
+Run the analysis on a standalone model or an ensemble model.
+
+You have the flexibility to run this analysis with either a standalone or ensemble model.
+
+**Grab your token**: Enter the token associated with your uploaded data. (Remember, this token acts as your key to access your data.)
+
+.. image:: images/ehr_ml_web/ssa_token_page.PNG
+
+**Dive deeper**: On the next page, provide additional details about the analysis.
+
+**Click and analyze**: Hit "Submit" and relax! You can revisit this page anytime to download the results.
+
+.. image:: images/ehr_ml_web/ssa_main_page.PNG
+
+**Output**:
+
+A JSON file containing the performance metricies including Fit Time, Score Time, Accuracy, Balanced Accuracy, Average Precision, F1, ROC AUC, and MCCF1 scores.
+
+This data helps you analyze the impact of different sample size on your model's effectiveness and choose the best option for your specific needs.
+
 Standardisation Analysis
 ------------------------
+
+**Uncover Standardisation Impact on Model's Performance!**
+
+This powerful tool helps you understand how different standardisation affect your prediction model's accuracy.
+
+**Standalone or Ensemble? Your Choice!**
+
+Run the analysis on a standalone model or an ensemble model.
+
+You have the flexibility to run this analysis with either a standalone or ensemble model.
+
+**Grab your token**: Enter the token associated with your uploaded data. (Remember, this token acts as your key to access your data.)
+
+.. image:: images/ehr_ml_web/sa_token_page.PNG
+
+**Dive deeper**: On the next page, provide additional details about the analysis.
+
+**Click and analyze**: Hit "Submit" and relax! You can revisit this page anytime to download the results.
+
+.. image:: images/ehr_ml_web/sa_main_page.PNG
+
+**Output**:
+
+A JSON file containing the performance metricies including Fit Time, Score Time, Accuracy, Balanced Accuracy, Average Precision, F1, ROC AUC, and MCCF1 scores.
+
+This data helps you analyze the impact of different standardisation on your model's effectiveness and choose the best option for your specific needs.
