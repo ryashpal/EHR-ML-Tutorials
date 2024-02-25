@@ -107,8 +107,6 @@ This powerful tool helps you understand how different data time windows affect y
 
 **Standalone or Ensemble? Your Choice!**
 
-Run the analysis on a standalone model or an ensemble model.
-
 You have the flexibility to run this analysis with either a standalone or ensemble model.
 
 **Grab your token**: Enter the token associated with your uploaded data. (Remember, this token acts as your key to access your data.)
@@ -135,8 +133,6 @@ Class Ratio Analysis
 This powerful tool helps you understand how different class ratio affect your prediction model's accuracy.
 
 **Standalone or Ensemble? Your Choice!**
-
-Run the analysis on a standalone model or an ensemble model.
 
 You have the flexibility to run this analysis with either a standalone or ensemble model.
 
@@ -165,8 +161,6 @@ This powerful tool helps you understand how different sample size affect your pr
 
 **Standalone or Ensemble? Your Choice!**
 
-Run the analysis on a standalone model or an ensemble model.
-
 You have the flexibility to run this analysis with either a standalone or ensemble model.
 
 **Grab your token**: Enter the token associated with your uploaded data. (Remember, this token acts as your key to access your data.)
@@ -193,8 +187,6 @@ Standardisation Analysis
 This powerful tool helps you understand how different standardisation affect your prediction model's accuracy.
 
 **Standalone or Ensemble? Your Choice!**
-
-Run the analysis on a standalone model or an ensemble model.
 
 You have the flexibility to run this analysis with either a standalone or ensemble model.
 
