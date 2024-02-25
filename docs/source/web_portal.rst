@@ -25,12 +25,35 @@ Upload data files
 
 **Let's upload your data!**
 
-Make sure your files match the format (sample file provided). Click "Start" on the homepage, then "Upload" on the "Data Management" page.
+Make sure your files match the format (sample file provided). Click "Start" on the `Homepage`, then "Upload" on the "Data Management" page.
 
 .. image:: images/ehr_ml_web/data_management_upload.png
 
+Every successful upload generates a unique token, which acts as an identifier for your data in subsequent analyses. Please keep this token safe and readily available.
+
+.. image:: images/ehr_ml_web/data_management_upload_token.png
+
 Evaluate
 --------
+
+**Evaluate your prediction model's performance with ease!**
+
+**Grab your token**: Enter the token associated with your uploaded data. (Remember, this token acts as your key to access your data.)
+
+.. image:: images/ehr_ml_web/evaluate_token_page.PNG
+
+**Dive deeper**: On the next page, provide additional details about your model.
+
+**Click and analyze**: Hit "Submit" and relax! You can revisit this page anytime to download the results.
+
+.. image:: images/ehr_ml_web/evaluate_main_page.PNG
+
+
+Output
+
+A JSON file containing the performance metricies including Fit Time, Score Time, Accuracy, Balanced Accuracy, Average Precision, F1, ROC AUC, and MCCF1 scores.
+
+With this information, you can make informed decisions about your model's effectiveness and optimize it for better performance.
 
 Build
 -----
