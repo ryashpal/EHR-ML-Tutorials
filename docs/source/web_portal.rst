@@ -80,6 +80,24 @@ Use this model to make predictions on new, unseen data anytime!
 Predict
 -------
 
+**Make Predictions with Your Model!**
+
+This tool lets you use your previously built model to analyze new, unseen data.
+
+**Grab your token**: Enter the token for your uploaded data (used for training and testing). Additionally, provide the token for your specific model (think of it as your model's unique ID).
+
+.. image:: images/ehr_ml_web/predict_token_page.PNG
+
+**Dive deeper**: On the next page, provide details about what you want to predict.
+
+**Click and analyze**: Hit "Submit" and relax! You can revisit this page anytime to download the results.
+
+.. image:: images/ehr_ml_web/predict_main_page.PNG
+
+**Output**:
+
+A csv file with predictions for every row of your uploaded data.
+
 Data Window Analysis
 --------------------
 
