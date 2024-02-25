@@ -18,7 +18,7 @@ Download sample data
 
 Download a sample input file to learn its format and dive right in. Click `Start` on the `Homepage`, then `Download` on the `Data Management` page.
 
-.. image:: images/ehr_ml_web/home_page.PNG
+.. image:: images/ehr_ml_web/data_management_download.png
 
 Upload data files
 -----------------
