@@ -48,8 +48,7 @@ Evaluate
 
 .. image:: images/ehr_ml_web/evaluate_main_page.PNG
 
-
-Output
+**Output**:
 
 A JSON file containing the performance metricies including Fit Time, Score Time, Accuracy, Balanced Accuracy, Average Precision, F1, ROC AUC, and MCCF1 scores.
 
@@ -57,6 +56,26 @@ With this information, you can make informed decisions about your model's effect
 
 Build
 -----
+
+**Build an ensemble model with your data!**
+
+This tool lets you create a robust ensemble machine learning model based on your uploaded data. It combines the strengths of multiple algorithms for improved accuracy and reliability.
+
+**Grab your token**: Enter the token associated with your uploaded data. (Remember, this token acts as your key to access your data.)
+
+.. image:: images/ehr_ml_web/build_token_page.PNG
+
+**Dive deeper**: On the next page, provide additional details about your model.
+
+**Click and analyze**: Hit "Submit" and relax! You can revisit this page anytime to download the results.
+
+.. image:: images/ehr_ml_web/build_main_page.PNG
+
+**Output**:
+
+A pickle file containing your trained ensemble model.
+
+Use this model to make predictions on new, unseen data anytime!
 
 Predict
 -------
