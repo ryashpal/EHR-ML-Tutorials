@@ -705,6 +705,60 @@ Output
 A csv file containing the predictions.
 
 
+Feature Importance
+------------------
+
+This utility will help to obtain the feature importance measures of the built ensemble models.
+
+Help menu
+~~~~~~~~~
+
+To display the help menu of the Feature Importance functionality.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ensemble.FeatureImportance -h
+
+
+or
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ensemble.FeatureImportance --help
+
+
+Output
+
+.. code-block:: console
+
+   usage: FeatureImportance.py [-h] [-i] [-sp SAVE_PATH] model_file
+   
+   EHR-ML machine learning utility
+   
+   positional arguments:
+     model_file            Path of the ensemble model file in pkl format
+   
+   options:
+     -h, --help            show this help message and exit
+     -i, --intermediate    Include feature importance of intermediate features
+     -sp SAVE_PATH, --save_path SAVE_PATH
+                           File path to save the feature importance
+
+
+To obtain Feature Importance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To obtain the feature importance for a built ensemble model.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.ensemble.FeatureImportance <path/to/model.pkl> -i <optional - to get the intermediate features> -sp <path/to/save/feature_importance.csv>
+
+Output
+
+A csv file containing the predictions.
+
+
 Set-up Optimisation (Benchmarking)
 ++++++++++++++++++++++++++++++++++
 
