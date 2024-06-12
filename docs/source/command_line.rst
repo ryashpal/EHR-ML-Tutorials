@@ -827,6 +827,56 @@ Output
 
 A pickle file containing a built ensemble model as specified in the configuration file.
 
+Configuration
+~~~~~~~~~~~~~
+
+The configuration files allows the flexibility to define the internal constituent models used to build the ensemble model. Addtitionally, it allows to specify the search range to be employed for the hyperparameter tuning. Essentially, this feature allows to custom design the ensemble structure and the tuning range of hyperparameters while building an ensemble model.
+
+The configuration contains the following tags;
+
+.. code-block:: json
+
+    # Execute block structure
+    'model_name': {
+        'model': <function to get the classifier>,
+        'search_params' : [
+        {'parameter_1' : <search range 1>},
+        {'parameter_2' : <search range 2>},
+            ...
+            ...
+        {'parameter_3' : <search range 3>},
+        ]
+    },
+
+Please refer the table below for information on the configuration fields.
+
++----------------------+-----------------------------------------------------------------------------+
+| Configuration Field  | Field Details                                                               |
++----------------------+-----------------------------------------------------------------------------+
+| model_name           | Identification name given to an internal constituent model                  |
++----------------------+-----------------------------------------------------------------------------+
+| model                | A fucntion that returns the model by importing from any external library    |
++----------------------+-----------------------------------------------------------------------------+
+| search_params        | a list of search parameter and their value ranges for hyperparameter tuning |
++----------------------+-----------------------------------------------------------------------------+
+
+An example configuration block for including ``Logistic Regression Classifier`` in the ensemble is given below;
+
+.. code-block:: json
+
+   # Execute block structure
+    'lr': {
+        'model': getLogisticRegression,
+        'search_params' : [
+            {'solver': ['newton-cg', 'liblinear']},
+            {'C': [1000, 100, 10, 1.0, 0.1, 0.01]},
+        ]
+    },
+
+
+.. note::
+
+   This configuration allows the flexibility to use any machine learning model imported from third party libraries in the ensemble structure. The function specified in the ``model`` parameter should import the necessary libraries and define any static configurations if necessary before returning the model.
 
 Predict
 -------
