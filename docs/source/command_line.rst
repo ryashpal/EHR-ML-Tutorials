@@ -740,6 +740,9 @@ Output
    options:
      -h, --help            show this help message and exit
      -i, --intermediate    Include feature importance of intermediate features
+     -p, --plot            Plot the important features
+     -f FEATURES, --features FEATURES
+                        Number of features to plot (required only with the -p option). By default: [features=10]
      -sp SAVE_PATH, --save_path SAVE_PATH
                            File path to save the feature importance
 
@@ -751,11 +754,11 @@ To obtain the feature importance for a built ensemble model.
 
 .. code-block:: console
 
-    (.venv) app_user@hostname:~$python -m ehrml.ensemble.FeatureImportance <path/to/model.pkl> -i <optional - to get the intermediate features> -sp <path/to/save/feature_importance.csv>
+    (.venv) app_user@hostname:~$python -m ehrml.ensemble.FeatureImportance <path/to/model.pkl> -i <optional: to get the intermediate features> -p <optional: to plot the important features> -f <required only with -p: number of features to plot> -sp <path/to/save/output/files/>
 
 Output
 
-A csv file containing the predictions.
+A csv file containing the predictions and optionally a plot showing top n features, both saved in the specified savepath.
 
 
 Generic Prediction Utility - V2
