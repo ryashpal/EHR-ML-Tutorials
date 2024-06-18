@@ -761,6 +761,9 @@ Output
 A csv file containing the predictions and optionally a plot showing top n features, both saved in the specified savepath.
 
 
+Time-Series Data Splitting
+--------------------------
+
 Generic Prediction Utility - V2
 +++++++++++++++++++++++++++++++
 
