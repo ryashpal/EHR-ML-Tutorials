@@ -764,6 +764,59 @@ A csv file containing the predictions and optionally a plot showing top n featur
 Time-Series Data Splitting
 --------------------------
 
+This utility will split the time series data in chronological order. This enables the creation of training sets using past episodes from a point of reference and future testing sets containing information that is temporally disconnected to the training data.
+
+Help menu
+~~~~~~~~~
+
+To display the help menu of the Time-Series Data Splitting functionality.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.split.TimeSeries -h
+
+
+or
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.split.TimeSeries --help
+
+
+Output
+
+.. code-block:: console
+
+   usage: TimeSeries.py [-h] [-s N_SPLITS] [-g GAP] [-sp SAVE_PATH] data_file
+   
+   EHR-ML machine learning utility
+   
+   positional arguments:
+     data_file             Path of the data file in csv format
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -s N_SPLITS, --n_splits N_SPLITS
+                           Number of splits to perform. By default: [n_splits=5]
+     -g GAP, --gap GAP     Gap between the training and test set. By default: [gap=0]
+     -sp SAVE_PATH, --save_path SAVE_PATH
+                           Path to save the splits
+
+
+To perform time series split
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To perform the time series split for a give data.
+
+.. code-block:: console
+
+    (.venv) app_user@hostname:~$python -m ehrml.split.TimeSeries <path/to/data.csv> -s <Number of splits to perform> -g <Gap between the training and test set> -sp <path/to/save/splitted/files/>
+
+Output
+
+Train and test csv files containing the splitted data, saved in the specified savepath.
+
+
 Generic Prediction Utility - V2
 +++++++++++++++++++++++++++++++
 
