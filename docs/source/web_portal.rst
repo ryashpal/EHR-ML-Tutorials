@@ -5,7 +5,7 @@ The EHR-ML is now accessible via a web-based interface through a dedicated web-p
 
 **Get started by visiting the below URL**
 
-http://118.138.239.87/
+http://118.138.236.90/
 
 After loading the URL, the `Homepage` appears;
 
