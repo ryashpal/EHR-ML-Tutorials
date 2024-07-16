@@ -5,7 +5,7 @@ The EHR-ML is now accessible via a web-based interface through a dedicated web-p
 
 **Get started by visiting the below URL**
 
-http://118.138.236.90/
+https://ehrml.tsonika-lab.cloud.edu.au/
 
 After loading the URL, the `Homepage` appears;
 
